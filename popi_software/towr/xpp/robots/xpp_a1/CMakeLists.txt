@@ -29,21 +29,9 @@ add_library(${PROJECT_NAME}
   src/inverse_kinematics_a1.cc
 )
 
-## URDF visualizers for all HyQ variants
-add_executable(urdf_visualizer_hyq1 src/exe/urdf_visualizer_hyq1.cc)
+## URDF visualizers for A1 variants
+add_executable(urdf_visualizer_a1 src/exe/urdf_visualizer_a1.cc)
 target_link_libraries(urdf_visualizer_a1
-  ${PROJECT_NAME}
-  ${catkin_LIBRARIES}
-)
-
-add_executable(urdf_visualizer_hyq2 src/exe/urdf_visualizer_hyq2.cc)
-target_link_libraries(urdf_visualizer_hyq2
-  ${PROJECT_NAME}
-  ${catkin_LIBRARIES}
-)
-
-add_executable(urdf_visualizer_hyq4 src/exe/urdf_visualizer_hyq4.cc)
-target_link_libraries(urdf_visualizer_hyq4
   ${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
@@ -53,7 +41,7 @@ target_link_libraries(urdf_visualizer_hyq4
 #############
 # Mark library for installation
 install(
-  TARGETS ${PROJECT_NAME} urdf_visualizer_hyq1 urdf_visualizer_hyq2 urdf_visualizer_hyq4
+  TARGETS ${PROJECT_NAME} urdf_visualizer_a1
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
