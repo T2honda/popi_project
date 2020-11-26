@@ -42,7 +42,7 @@ RobotModel::RobotModel(Robot robot)
   switch (robot) {
     case A1:
       dynamic_model_ = std::make_shared<A1DynamicsModel>();
-      
+      kinematic_model_ = std::make_shared<A1KinematicModel>();
     case Popi:
       dynamic_model_   = std::make_shared<PopiDynamicModel>();
       kinematic_model_ = std::make_shared<PopiKinematicModel>();
