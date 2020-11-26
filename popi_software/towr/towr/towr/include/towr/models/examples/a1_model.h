@@ -35,9 +35,9 @@ public:
 /**
  * @brief The Dynamics of the quadruped robot Popi.
  */
-class PopiDynamicModel : public SingleRigidBodyDynamics {
+class A1DynamicModel : public SingleRigidBodyDynamics {
 public: // double mass, double Ixx, double Iyy, double Izz, double Ixy, double Ixz, double Iyz, int ee_count
-  PopiDynamicModel() : SingleRigidBodyDynamics(50.033,
+  A1DynamicModel() : SingleRigidBodyDynamics(50.033,
                       0.97314, 3.88974, 4.74716, 0.0, 0.0, 0.0,
                       4) {}
 };
